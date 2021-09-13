@@ -1,0 +1,40 @@
+#invader {
+    display: block;
+    width: 200px;
+    margin: 3em auto;
+    animation: move 2s ease-in-out 0s infinite alternate;
+}
+
+#invader path {
+    stroke-width: 0;
+    fill: #080;
+    animation: flash 1s linear 0s infinite alternate;
+}
+
+#invader path:hover {
+    fill: #c00;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-200px);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0.4;
+    }
+}
